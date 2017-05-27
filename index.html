@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>FlexBox Visualisations</title>
+    <link href="./resources/css/style.css" type="text/css" rel="stylesheet" />
+  </head>
+
+  <body>
+
+    <!-- fixed header menu -->
+
+    <nav>
+
+      <div id="menu">
+      <p class="menu-title">FlexBox Visualisations:</p>
+        <li>
+          <a href="#justify-content" class="flex-container">justify-content</a>
+        </li>
+        <li>
+          <a href="#align-items" class="flex-container">align-items</a>
+        </li>
+          <a href="#align-content" class="flex-container">align-content</a>
+        </li>
+          <a href="#flex-wrap" class="flex-container">flex-wrap</a>
+        </li>
+        <li>
+          <a href="#flex-grow" class="flex-item">
+          flex-grow</a>
+        </li>
+        <li>
+          <a href="#flex-shrink" class="flex-item">flex-shrink</a>
+        </li>
+        <li>
+          <a href="#flex-direction">flex-direction</a>
+        </li>
+      </div>
+
+    </nav>
+
+    <article>
+
+        <!-- justify-content -->
+
+        <div>
+
+          <h6 id="justify-content" class="anchor-padding flex-container">justify-content</h6>
+          <p>Horizontal alignment of children (along the <span class="major-axis">major axis</span>) for <span class="flex-container">Flex Containers</span> (parent).</p>
+
+          <h1>justify-content: flex-start;</h1>
+          <div class="container" id="flexstart">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+          </div>
+
+          <h1>justify-content: flex-end;</h1>
+          <div class="container" id="flexend">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+          </div>
+
+          <h1>justify-content: center;</h1>
+          <div class="container" id="center">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+          </div>
+
+          <h1>justify-content: space-around;</h1>
+          <div class="container" id="spacearound">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+          </div>
+
+          <h1>justify-content: space-between;</h1>
+          <div class="container" id="spacebetween">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+          </div>
+
+        </div>
+
+        <!-- align-items -->
+
+        <div>
+
+          <h6 id="align-items" class="anchor-padding flex-container">align-items</h6>
+          <p>Vertical alignment of children (along the <span class="cross-axis">cross axis</span>) for <span class="flex-container">Flex Containers</span> (parent).</p>
+
+          <h1>align-items: flex-start;</h1>
+          <div class="container align-items" id="flexstart-align-items">
+            <div class="left"></div>
+            <div class="center"></div>
+            <div class="right"></div>
+          </div>
+
+          <h1>align-items: flex-end;</h1>
+          <div class="container align-items" id="flexend-align-items">
+            <div class="left"></div>
+            <div class="center"></div>
+            <div class="right"></div>
+          </div>
+
+          <h1>align-items: center;</h1>
+          <div class="container align-items" id="center">
+            <div class="left"></div>
+            <div class="center"></div>
+            <div class="right"></div>
+          </div>
+
+          <h1>align-items: baseline;</h1>
+          <div class="container align-items" id="baseline">
+            <div class="left"></div>
+            <div class="center"></div>
+            <div class="right"></div>
+          </div>
+
+          <h1>align-items: stretch;</h1>
+          <div class="container align-items" id="stretch">
+            <div class="left"></div>
+            <div class="center"></div>
+            <div class="right"></div>
+
+          </div>
+
+        </div>
+
+        <!-- align-content -->
+
+        <div>
+
+          <h6 id="align-content" class="anchor-padding flex-container">align-content</h6>
+          <p>Space multiple rows of flex children (along the <span class="cross-axis">cross axis</span>) for <span class="flex-container">Flex Containers</span> (parent).</p>
+
+          <h1>align-content: flex-start;</h1>
+          <div class="container2" id="flexstart">
+            <div class="left2"></div>
+            <div class="center2"></div>
+            <div class="right2"></div>
+          </div>
+          <h1>align-content: flex-end;</h1>
+          <div class="container2" id="flexend">
+            <div class="left2"></div>
+            <div class="center2"></div>
+            <div class="right2"></div>
+          </div>
+          <h1>align-content: center;</h1>
+          <div class="container2" id="center">
+            <div class="left2"></div>
+            <div class="center2"></div>
+            <div class="right2"></div>
+          </div>
+          <h1>align-content: space-between;</h1>
+          <div class="container2" id="between">
+            <div class="left2"></div>
+            <div class="center2"></div>
+            <div class="right2"></div>
+          </div>
+          <h1>align-content: space-around;</h1>
+          <div class="container2" id="around">
+            <div class="left2"></div>
+            <div class="center2"></div>
+            <div class="right2"></div>
+          </div>
+          <h1>align-content: stretch;</h1>
+          <div class="container2" id="stretch">
+            <div class="left2"></div>
+            <div class="center2"></div>
+            <div class="right2"></div>
+          </div>
+
+        </div>
+
+        <!-- flex-wrap -->
+
+        <div>
+
+          <h6 id="flex-wrap" class="anchor-padding flex-container">flex-wrap</h6>
+          <p>
+            Wrapping behavior of flex children (like word wrap!) around resized viewport (along the <span class="major-axis">major axis</span>) for <span class="flex-container">Flex Containers</span> (parent).
+          </p>
+          <p>
+            To see changes, you must <strong>physically resize browser window</strong> as changes doesn't seem to kick in responsive display in DevTools.
+          </p>
+
+          <h1>flex-wrap: wrap;</h1>
+          <div class="container-wrap" id="wrap">
+            <div class="box-wrap">
+              <h3>1</h3>
+            </div>
+            <div class="box-wrap">
+              <h3>2</h3>
+            </div>
+            <div class="box-wrap">
+              <h3>3</h3>
+            </div>
+            <div class="box-wrap">
+              <h3>4</h3>
+            </div>
+            <div class="box-wrap">
+              <h3>5</h3>
+            </div>
+          </div>
+          <h1>flex-wrap: no-wrap;</h1>
+          <div class="container-wrap" id="nowrap">
+            <div class="box-wrap">
+              <h3>1</h3>
+            </div>
+            <div class="box-wrap">
+              <h3>2</h3>
+            </div>
+            <div class="box-wrap">
+              <h3>3</h3>
+            </div>
+            <div class="box-wrap">
+              <h3>4</h3>
+            </div>
+            <div class="box-wrap">
+              <h3>5</h3>
+            </div>
+          </div>
+          <h1>flex-wrap: wrap-reverse;</h1>
+          <div class="container-wrap" id="reverse">
+            <div class="box-wrap">
+              <h3>1</h3>
+            </div>
+            <div class="box-wrap">
+              <h3>2</h3>
+            </div>
+            <div class="box-wrap">
+              <h3>3</h3>
+            </div>
+            <div class="box-wrap">
+              <h3>4</h3>
+            </div>
+            <div class="box-wrap">
+              <h3>5</h3>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- flex-grow -->
+
+        <div>
+
+          <h6 id="flex-grow" class="anchor-padding flex-item">flex-grow</h6>
+          <p>
+            How much to grow when viewport gets bigger (along the <span class="major-axis">major axis</span>) for <span class="flex-item">Flex Items</span> (children).
+          </p>
+          <p>
+            To see changes, you must <strong>physically resize browser window</strong> as changes doesn't seem to kick in responsive display in DevTools.
+          </p>
+
+          <h1>All <span class="flex-children">Flex Items</span> have equal value</h1>
+          <div id="top">
+            <div class="top side">
+              <h2>1</h2>
+              <p>flex-grow: 1;</p>
+            </div>
+            <div class="top center">
+              <h2>2</h2>
+              <p>flex-grow: 1;</p>
+            </div>
+            <div class="top side">
+              <h2>3</h2>
+              <p>flex-grow: 1;</p>
+            </div>
+          </div>
+
+          <h1>Only one Flex Item with specified value (default is zero)</h1>
+          <div id="middle">
+            <div class="middle side">
+              <h2>1</h2>
+              <p>unspecified</p>
+            </div>
+            <div class="middle center">
+              <h2>2</h2>
+              <p>flex-grow: 1;</p>
+            </div>
+            <div class="middle side">
+              <h2>3</h2>
+              <p>unspecified</p>
+            </div>
+          </div>
+
+          <h1>Varying values</h1>
+          <div id="bottom">
+            <div class="bottom side">
+              <h2>1</h2>
+              <p>flex-grow: 1;</p>
+            </div>
+            <div class="bottom center">
+              <h2>2</h2>
+              <p>flex-grow: 3;</p>
+            </div>
+            <div class="bottom side right">
+              <h2>3</h2>
+              <p>flex-grow: 6;</p>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- flex-shrink -->
+
+        <div>
+
+          <h6 id="flex-shrink" class="anchor-padding flex-item">flex-shrink</h6>
+          <p>
+            How much to shrink when viewport gets smaller (along the <span class="major-axis">major axis</span>) for <span class="flex-item">Flex Items</span> (children).
+            </p>
+          <p>
+            To see changes, you must <strong>physically resize browser window</strong> as changes doesn't seem to kick in responsive display in DevTools.
+          </p>
+
+          <h1>Only one Flex Item with specified value (default is 1)</h1>
+          <div id="top">
+            <div class="top side">
+              <h2>1</h2>
+              <p>flex-shrink: 2;</p>
+            </div>
+            <div class="top center">
+              <h2>2</h2>
+              <p>unspecified</p>
+            </div>
+            <div class="top side">
+              <h2>3</h2>
+              <p>unspecified</p>
+            </div>
+          </div>
+          <h1>Explicity specifying value as zero</h1>
+          <div id="middle">
+            <div class="middle side">
+              <h2>1</h2>
+              <p>flex-shrink: 0;</p>
+            </div>
+            <div class="middle center">
+              <h2>2</h2>
+              <p>flex-shrink: 1;</p>
+            </div>
+            <div class="middle side">
+              <h2>3</h2>
+              <p>flex-shrink: 0;</p>
+            </div>
+          </div>
+          <h1>Only one Flex Item with specified value (default is 1)</h1>
+          <div id="bottom">
+            <div class="bottom side">
+              <h2>1</h2>
+              <p>unspecified</p>
+            </div>
+            <div class="bottom center">
+              <h2>2</h2>
+              <p>flex-shrink: 2;</p>
+            </div>
+            <div class="bottom side">
+              <h2>3</h2>
+              <p>unspecified</p>
+            </div>
+          </div>
+
+        <!-- flex-direction -->
+
+        <div>
+
+          <h6 id="flex-direction" class="anchor-padding flex-container">flex-direction</h6>
+          <p>
+            Switch the two axes for <span class="flex-container">Flex Container</span> (parent).
+          </p>
+          <p>
+            To see changes, you must <strong>physically resize browser window</strong> as changes doesn't seem to kick in responsive display in DevTools.
+          </p>
+
+          <h1>flex-direction: row;</h1>
+          <div class="container3" id="row">
+            <div class="box3">
+              <h2>1</h2>
+            </div>
+            <div class="box3">
+              <h2>2</h2>
+            </div>
+            <div class="box3">
+              <h2>3</h2>
+            </div>
+            <div class="box3">
+              <h2>4</h2>
+            </div>
+            <div class="box3">
+              <h2>5</h2>
+            </div>
+          </div>
+          <h1>flex-direction: row-reverse;</h1>
+          <div class="container3" id="row-reverse">
+            <div class="box3">
+              <h2>1</h2>
+            </div>
+            <div class="box3">
+              <h2>2</h2>
+            </div>
+            <div class="box3">
+              <h2>3</h2>
+            </div>
+            <div class="box3">
+              <h2>4</h2>
+            </div>
+            <div class="box3">
+              <h2>5</h2>
+            </div>
+          </div>
+          <h1>flex-direction: column;</h1>
+          <div class="container3" id="column">
+            <div class="box3">
+              <h2>1</h2>
+            </div>
+            <div class="box3">
+              <h2>2</h2>
+            </div>
+            <div class="box3">
+              <h2>3</h2>
+            </div>
+            <div class="box3">
+              <h2>4</h2>
+            </div>
+            <div class="box3">
+              <h2>5</h2>
+            </div>
+          </div>
+          <h1>flex-direction: column-reverse;</h1>
+          <div class="container3" id="column-reverse">
+            <div class="box3">
+              <h2>1</h2>
+            </div>
+            <div class="box3">
+              <h2>2</h2>
+            </div>
+            <div class="box3">
+              <h2>3</h2>
+            </div>
+            <div class="box3">
+              <h2>4</h2>
+            </div>
+            <div class="box3">
+              <h2>5</h2>
+            </div>
+          </div>
+
+        </div>
+
+
+
+        </div>
+      </article>
+
+  </body>
+
+</html>

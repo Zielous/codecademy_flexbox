@@ -1,0 +1,395 @@
+/* ------------ setup ------------ */
+
+body {
+  border: 0;
+  margin: 0;
+  font-family: "Helvetica";
+}
+
+nav {
+  padding-bottom: 1px;
+}
+
+#menu {
+  text-align: center;
+  background: black;
+  width: 100%;
+  position: fixed;
+  height: 30px;
+  z-index: 100;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#menu li,
+.menu-title {
+  list-style: none;
+  display: inline-block;
+}
+
+li {
+
+}
+
+a,
+.menu-title {
+  color: white;
+  text-decoration: none;
+}
+
+
+.flex-container {
+color: green;
+}
+
+.flex-item {
+color: orange;
+}
+
+
+.menu-title {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+/* Fix for anchor jumps with a fixed header */
+.anchor-padding:before {
+  display: block;
+  content: " ";
+  height: 30px;  /* Give height of your fixed element */
+  margin-top: -30px; /* Give negative margin of your fixed element */
+  visibility: hidden;
+}
+
+
+h6 { /* Main header since Codecademy's defaults were already h1 and h2 and I didn't want to have to change those in the HTML */
+  font-size: 40px;
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+  margin-top: 30px;
+  padding-bottom: 10px;
+}
+
+h1,
+h2,
+h3,
+h6 {
+  text-align: center;
+}
+
+h1 { /* Codecademy's default headers for the visualisations */
+  font-size: 18px;
+  font-style: italic;
+}
+
+p {
+  text-align: center;
+  font-size: 12px;
+  margin: 0px 0px;
+}
+
+article {
+  margin-top: 10px;
+}
+
+
+.major-axis {
+  color: blue;
+}
+
+.cross-axis {
+  color: purple;
+}
+
+
+
+/* ------------ justify-content ------------ */
+
+.container {
+  height: 150px;
+  width: 600px;
+  margin: 0px auto;
+  display: flex;
+  background-color: whitesmoke;
+}
+
+.box {
+  height: 75px;
+  width: 100px;
+  background-color: dodgerblue;
+  border: 1px solid lightgrey;
+  display: inline-block;
+}
+
+#flexstart {
+  justify-content: flex-start;
+}
+
+#flexend {
+  justify-content: flex-end;
+}
+
+#center {
+  justify-content: center;
+}
+
+#spacearound {
+  justify-content: space-around;
+}
+
+#spacebetween {
+  justify-content: space-between;
+}
+
+
+
+
+/* ------------ align-items ------------ */
+
+.align-items {
+  justify-content: center;
+}
+
+
+.left,
+.center,
+.right {
+
+  /* these selectors affect id #stretch - change min-height to just height to see the difference */
+
+  min-height: 75px;
+  width: 125px;
+  background-color: dodgerblue;
+  border: 2px solid lightgrey;
+}
+
+#baseline .center {
+  height: 100px;
+  width: 100px;
+  border: 5px solid turquoise;
+}
+
+#flexstart-align-items {
+  align-items: flex-start;
+}
+
+#flexend-align-items {
+  align-items: flex-end;
+}
+
+#center {
+  align-items: center;
+
+}
+
+#baseline {
+  align-items: baseline;
+}
+
+
+
+/* ------------ align-content ------------ */
+
+
+.container2 {
+  height: 300px;
+  width: 600px; /* important to have a fixed width to show this properly */
+  background-color: whitesmoke;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.left2,
+.center2,
+.right2 {
+  min-height: 75px;
+  width: 200px;
+  margin: 2px;
+  background-color: dodgerblue;
+  border: 2px solid lightgrey;
+}
+
+#flexstart {
+align-content: flex-start;
+}
+
+#flexend {
+align-content: flex-end;
+}
+
+#center {
+align-content: center;
+}
+
+#between {
+align-content: space-between;
+}
+
+#around {
+align-content: space-around;
+}
+
+
+/* ------------ flex-wrap ------------ */
+
+
+.container-wrap {
+  background-color: dodgerblue;
+  display: flex;
+  align-items: center;
+  min-height: 125px;
+  justify-content: space-around;
+}
+
+.box-wrap {
+  background-color: whitesmoke;
+  border: 1px solid white;
+  width: 100px;
+  height: 100px;
+}
+
+#wrap {
+  flex-wrap: wrap;
+}
+
+#nowrap {
+  flex-wrap: nowrap;
+}
+
+#reverse {
+  flex-wrap: wrap-reverse;
+}
+
+/* ------------ flex-grow ------------ */
+
+
+h1 {
+  font-size: 18px;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+.top,
+.middle,
+.bottom {
+  width: 100px;
+  height: 100px;
+  background-color: dodgerblue;
+  border: 2px solid lightgrey;
+  margin: 10px 30px;
+}
+
+#top,
+#middle,
+#bottom {
+  display: flex;
+  background-color: whitesmoke;
+  justify-content: center;
+  min-height: 200px;
+  align-items: center;
+}
+
+.top.side {
+  flex-grow: 1;
+}
+
+.top.center {
+  flex-grow: 1;
+}
+
+.middle.side {
+
+}
+
+.middle.center {
+  flex-grow: 1;
+
+}
+
+.bottom.side {
+  flex-grow: 1;
+}
+
+.bottom.center {
+  flex-grow: 3;
+}
+
+.bottom.side.right {
+  flex-grow: 6;
+}
+
+/* ------------ flex-shrink ------------ */
+
+.top.side {
+  flex-grow: 1;
+  flex-shrink: 2;
+}
+
+.top.center {
+  flex-grow: 1;
+}
+
+.middle.side {
+  flex-shrink: 0;
+}
+
+.middle.center {
+  flex-grow: 1;
+
+}
+
+.bottom.side {
+  flex-grow: 1;
+}
+
+.bottom.center {
+  flex-grow: 2;
+  flex-shrink: 2;
+}
+
+/* ------------ flex-container ------------ */
+
+.container3 {
+  background-color: dodgerblue;
+  display: flex;
+  max-height: 600px; /* important to show how this works rather than just height */
+  align-items: center;
+  justify-content: space-around;
+}
+
+.box3 { /* No .box2 but .container2 is used and wanted to keep it consistent */
+  background-color: whitesmoke;
+  border: 1px solid white;
+  width: 100px;
+  height: 100px;
+  flex-grow: 1;
+}
+
+#row {
+  flex-direction: row;
+}
+
+#row-reverse {
+  flex-direction: row-reverse;
+}
+
+#column {
+  flex-direction: column;
+}
+
+#column-reverse {
+  flex-direction: column-reverse;
+}
+
